@@ -216,7 +216,7 @@ Demo with BoT-SORT(-ReID) based YOLOX and multi-class.
 cd <BoT-SORT_dir>
 
 # Original example
-python3 tools/demo.py video --path <path_to_video> -f yolox/exps/example/mot/yolox_x_mix_det.py -c pretrained/bytetrack_x_mot17.pth.tar --with-reid --fuse-score --fp16 --fuse --save_result
+python3 tools/demo.py video --path <path_to_video> -f yolox/exps/example/mot/yolox_x_mix_det.py -c /bytetrack_x_mot17.pth.tar --with-reid --fuse-score --fp16 --fuse --save_result
 
 # Multi-class example
 python3 tools/mc_demo.py video --path <path_to_video> -f yolox/exps/example/mot/yolox_x_mix_det.py -c pretrained/bytetrack_x_mot17.pth.tar --with-reid --fuse-score --fp16 --fuse --save_result

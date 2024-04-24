@@ -59,8 +59,8 @@ def make_parser():
 
     # ReID
     parser.add_argument("--with-reid", dest="with_reid", default=False, action="store_true", help="use Re-ID flag.")
-    parser.add_argument("--fast-reid-config", dest="fast_reid_config", default=r"fast_reid/configs/MOT17/sbs_S50.yml", type=str, help="reid config file path")
-    parser.add_argument("--fast-reid-weights", dest="fast_reid_weights", default=r"pretrained/mot17_sbs_S50.pth", type=str, help="reid config file path")
+    parser.add_argument("--fast-reid-config", dest="fast_reid_config", default=r"/content/BoT-SORT/fast_reid/configs/MOT17/sbs_S50.yml", type=str, help="reid config file path")
+    parser.add_argument("--fast-reid-weights", dest="fast_reid_weights", default=r"/content/BoT-SORT/pretrained/mot17_sbs_S50.pth", type=str, help="reid config file path")
     parser.add_argument('--proximity_thresh', type=float, default=0.5, help='threshold for rejecting low overlap reid matches')
     parser.add_argument('--appearance_thresh', type=float, default=0.25, help='threshold for rejecting low appearance similarity reid matches')
 
@@ -329,7 +329,7 @@ if __name__ == "__main__":
                         args.ckpt = r'./pretrained/bytetrack_ablation.pth.tar'
                     else:
                         args.exp_file = r'./yolox/exps/example/mot/yolox_x_mix_det.py'
-                        args.ckpt = r'./pretrained/bytetrack_x_mot17.pth.tar'
+                        args.ckpt = r'/content/BoT-SORT/pretrained/bytetrack_x_mot17.pth.tar'
 
                 exp = get_exp(args.exp_file, args.name)
 
